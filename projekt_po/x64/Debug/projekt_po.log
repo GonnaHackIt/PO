@@ -1,0 +1,34 @@
+﻿  context.cpp
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.h(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\map.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.h(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\radar.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(65,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(153,43): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(153,30): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(181,39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(186,43): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(186,30): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\Dawid\Documents\studia\projekt_po\projekt_po\context.cpp(201,8): warning C4102: 'update': unreferenced label
+  projekt_po.vcxproj -> C:\Users\Dawid\Documents\studia\projekt_po\x64\Debug\projekt_po.exe
