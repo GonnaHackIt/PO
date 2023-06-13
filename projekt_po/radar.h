@@ -63,4 +63,6 @@ public:
 	Radar();
 	void render(Context* ctx);
 	void update(Context* ctx);
+
+	void add_aircraft(Aircraft* aircraft);
 };

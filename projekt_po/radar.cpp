@@ -212,3 +212,12 @@ void Radar::update(Context* ctx) {
 		aircraft->update();
 	}
 }
+void Radar::add_aircraft(Aircraft* aircraft)
+{
+	int maxAircrafts = 15; //to mo¿e byc zmienione
+	if (this->aircrafts.size() >= maxAircrafts)
+	{
+		throw MaxAircraftsExceededException();
+	}
+	this->aircrafts.push_back(aircraft);
+}

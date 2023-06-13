@@ -101,6 +101,7 @@ Context::Context(Map map, Radar radar, int choice, sf::Font font) {
 	this->selected = -1;
 	this->font = font;
 	this->window.create(sf::VideoMode(1280, 720), "Radar Lotów");
+	this->window.setFramerateLimit(100);
 	this->frame = 0;
 
 	this->altitude_meter.setFont(this->font);
@@ -110,9 +111,13 @@ Context::Context(Map map, Radar radar, int choice, sf::Font font) {
 
 	for (int i = 0; i < NUM_TEXTURES; i++) {
 		sf::Image* image = new sf::Image();
-		image->loadFromFile("Textures/" + std::to_string(i) + ".png");
+
+		if (!image->loadFromFile("Textures/" + std::to_string(i) + ".png"))
+			throw TextureLoadException();
+
 		sf::Texture* texture = new sf::Texture();
 		texture->loadFromImage(*image);
+
 		sf::Sprite sprite;
 		sprite.setTexture(*texture, true);
 
@@ -161,7 +166,7 @@ void Context::run() {
 					}
 
 					FlightPath path(position, position);
-					Aircraft* new_aircraft;
+					Aircraft* new_aircraft = nullptr;
 
 					switch (choice) {
 					case 0:
@@ -178,8 +183,15 @@ void Context::run() {
 						break;
 					}
 
-					selected = radar.aircrafts.size();
-					radar.aircrafts.push_back(new_aircraft);
+					
+					try {
+						radar.add_aircraft(new_aircraft);
+						selected = radar.aircrafts.size() - 1;
+					}
+					catch (MaxAircraftsExceededException error)
+					{
+						std::cout << error.what() << std::endl;
+					}
 				}
 				else if (selected != -1) {
 					sf::Vector2i mouse_pos = sf::Mouse::getPosition(window);

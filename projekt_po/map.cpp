@@ -37,7 +37,7 @@ Map Map::load(std::string filename) {
 	std::ifstream file(filename);
 
 	if (!file) {
-		std::cout << "Nie udalo sie otworzyc pliku" << std::endl;
+		throw MapLoadException();
 	}
 
 	int x, y, type;
@@ -64,6 +64,3 @@ void Map::render(Context* ctx) {
 void Map::update(Context* ctx) {
 
 }
-
-
-

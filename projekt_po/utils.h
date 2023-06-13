@@ -51,3 +51,24 @@ public:
 };
 
 float dist(Point a, Point b);
+
+class MapLoadException : public std::exception
+{
+public:
+	MapLoadException() = default;
+
+	const char* what();
+};
+
+class TextureLoadException : public std::exception {
+public:
+	TextureLoadException() = default;
+	const char* what();
+};
+
+class MaxAircraftsExceededException : public std::exception {
+public:
+	MaxAircraftsExceededException() = default;
+	const char* what();
+	
+};
